@@ -74,13 +74,13 @@ export default function Index() {
   const tabs = ["Dashboard", "Quizz", "Teachers", "Message", "Settings"];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white flex flex-col">
       <Navigation />
 
-      <div className="relative">
-        <div className="absolute inset-x-0 top-0 h-[280px] bg-bk-color -mt-20" />
+      <div className="relative flex-1">
+        <div className="absolute inset-x-0 top-0 h-[280px] bg-bk-color" />
         
-        <div className="relative max-w-[1320px] mx-auto px-8 pt-20">
+        <div className="relative max-w-[1320px] mx-auto px-4 md:px-8 pt-10">
           <div className="bg-white border border-secondary-600 shadow-sm">
             <div className="flex items-center justify-between p-10">
               <div className="flex items-center gap-6">
@@ -126,12 +126,12 @@ export default function Index() {
         </div>
       </div>
 
-      <div className="max-w-[1320px] mx-auto px-8 py-20 flex flex-col items-center gap-10">
+      <div className="max-w-[1320px] mx-auto px-4 md:px-8 py-10 md:py-20 flex flex-col items-center gap-10">
         <h2 className="text-2xl font-semibold text-gray-900 tracking-tight">
           Dashboard
         </h2>
 
-        <div className="flex items-start gap-6 justify-center">
+        <div className="flex flex-wrap items-start gap-6 justify-center">
           {stats.map((stat, index) => (
             <div 
               key={index}
@@ -149,7 +149,7 @@ export default function Index() {
         </div>
       </div>
 
-      <div className="max-w-[1320px] mx-auto px-8 pb-20">
+      <div className="max-w-[1320px] mx-auto px-4 md:px-8 pb-20">
         <div className="flex flex-col gap-6">
           <div className="flex items-center justify-between">
             <h2 className="text-2xl font-semibold text-gray-900 tracking-tight">

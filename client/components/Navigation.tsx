@@ -2,21 +2,21 @@ import { Search, Bell, Heart, ShoppingCart } from "lucide-react";
 
 export default function Navigation() {
   return (
-    <nav className="w-full bg-white border-b border-gray-100">
-      <div className="flex items-center justify-between px-8 py-6">
-        <div className="flex items-center gap-12">
+    <nav className="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
+      <div className="flex items-center justify-between px-4 md:px-8 py-4 md:py-6">
+        <div className="flex items-center gap-4 md:gap-12 flex-1">
           <div className="flex items-center gap-2">
             <img 
               src="https://api.builder.io/api/v1/image/assets/TEMP/5895e010e8f41828710579bc2c0a67fc2cff6dbc?width=90" 
               alt="BK Logo" 
               className="w-[45px] h-[45px]"
             />
-            <span className="text-[32px] font-semibold text-gray-900 tracking-tight">
+            <span className="text-xl md:text-[32px] font-semibold text-gray-900 tracking-tight">
               ITS System
             </span>
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-4">
             <div className="flex items-center gap-2 px-5 py-3 border border-gray-100 bg-white min-w-[200px]">
               <span className="text-base text-gray-700">Browse</span>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="ml-auto">
@@ -35,7 +35,7 @@ export default function Navigation() {
           </div>
         </div>
 
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-3 md:gap-6">
           <div className="relative">
             <Bell className="w-6 h-6 text-gray-900" />
             <div className="absolute -top-1 -right-1 w-4 h-4 bg-secondary-600 rounded-full border-2 border-white" />
