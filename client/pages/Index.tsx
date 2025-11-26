@@ -9,57 +9,61 @@ export default function Index() {
       value: "957",
       label: "Active Quizz",
       bgColor: "bg-primary-100",
-      iconColor: "text-primary-500"
+      iconColor: "text-primary-500",
     },
     {
       icon: CheckSquare,
       value: "6",
       label: "Active Teachers",
       bgColor: "bg-secondary-100",
-      iconColor: "text-[#564FFD]"
+      iconColor: "text-[#564FFD]",
     },
     {
       icon: Trophy,
       value: "951",
       label: "Completed Quizz",
       bgColor: "bg-success-100",
-      iconColor: "text-success-500"
-    }
+      iconColor: "text-success-500",
+    },
   ];
 
   const courses = [
     {
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/048f726119b554c2e6526e1cb1590439a920678c?width=624",
+      image:
+        "https://api.builder.io/api/v1/image/assets/TEMP/048f726119b554c2e6526e1cb1590439a920678c?width=624",
       subtitle: "Reiki Level I, II and Master/Teacher Program",
       title: "1. Intorductions",
       progress: 100,
       progressColor: "bg-success-500",
       buttonColor: "bg-bk-color",
       buttonText: "Watch Lecture",
-      completed: null
+      completed: null,
     },
     {
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/8bdbd8ae41e42aa4c4bf46c7ec3d6d8f957de900?width=624",
+      image:
+        "https://api.builder.io/api/v1/image/assets/TEMP/8bdbd8ae41e42aa4c4bf46c7ec3d6d8f957de900?width=624",
       subtitle: "The Complete 2021 Web Development Bootcamp",
       title: "167. What You'll Need to Get Started - Se...",
       progress: 61,
       progressColor: "bg-primary-500",
       buttonColor: "bg-bk-color",
       buttonText: "Watch Lecture",
-      completed: "61% Completed"
+      completed: "61% Completed",
     },
     {
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/ac1a25bb5a96396138d8e315f11ecf0e9905f68b?width=624",
+      image:
+        "https://api.builder.io/api/v1/image/assets/TEMP/ac1a25bb5a96396138d8e315f11ecf0e9905f68b?width=624",
       subtitle: "Copywriting - Become a Freelance Copywriter...",
       title: "1. How to get started with figma",
       progress: 100,
       progressColor: "bg-success-500",
       buttonColor: "bg-bk-color",
       buttonText: "Watch Lecture",
-      completed: null
+      completed: null,
     },
     {
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/1f1760ef12d065c8137a2e1e2b09fc52fdd74780?width=624",
+      image:
+        "https://api.builder.io/api/v1/image/assets/TEMP/1f1760ef12d065c8137a2e1e2b09fc52fdd74780?width=624",
       subtitle: "2021 Complete Python Bootcamp From Zero to...",
       title: "9. Advanced CSS - Selector Priority",
       progress: 12,
@@ -67,8 +71,8 @@ export default function Index() {
       buttonColor: "bg-secondary-300",
       buttonText: "Watch Lecture",
       completed: "12% Finish",
-      isActive: true
-    }
+      isActive: true,
+    },
   ];
 
   const tabs = ["Dashboard", "Quizz", "Teachers", "Message", "Settings"];
@@ -79,14 +83,14 @@ export default function Index() {
 
       <div className="relative flex-1">
         <div className="absolute inset-x-0 top-0 h-[280px] bg-bk-color" />
-        
+
         <div className="relative max-w-[1320px] mx-auto px-4 md:px-8 pt-10">
           <div className="bg-white border border-secondary-600 shadow-sm">
             <div className="flex flex-col lg:flex-row items-center justify-between p-6 md:p-10 gap-6">
               <div className="flex flex-col sm:flex-row items-center gap-6 w-full lg:w-auto">
-                <img 
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/0ee3c66b6366a6afbe928634f8eb3f2d9b8f4f0d?width=220" 
-                  alt="Student Profile" 
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/0ee3c66b6366a6afbe928634f8eb3f2d9b8f4f0d?width=220"
+                  alt="Student Profile"
                   className="w-[110px] h-[110px] rounded-full object-cover"
                 />
                 <div className="flex flex-col gap-3 text-center sm:text-left">
@@ -133,7 +137,7 @@ export default function Index() {
 
         <div className="flex flex-wrap items-start gap-6 justify-center">
           {stats.map((stat, index) => (
-            <div 
+            <div
               key={index}
               className={`flex items-center gap-6 p-6 ${stat.bgColor}`}
             >
@@ -167,13 +171,15 @@ export default function Index() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {courses.map((course, index) => (
-              <div 
+              <div
                 key={index}
                 className={`flex flex-col gap-4 bg-white border ${
-                  course.isActive ? "border-transparent shadow-xl" : "border-gray-100"
+                  course.isActive
+                    ? "border-transparent shadow-xl"
+                    : "border-gray-100"
                 }`}
               >
-                <img 
+                <img
                   src={course.image}
                   alt={course.title}
                   className="w-full h-[220px] object-cover border-b border-gray-100"
@@ -186,13 +192,15 @@ export default function Index() {
                     {course.title}
                   </h3>
                 </div>
-                
+
                 <div className="w-full h-px bg-gray-100" />
-                
+
                 <div className="px-4 pb-4">
                   {course.completed ? (
                     <div className="flex items-center justify-between mb-4">
-                      <button className={`px-4 py-2 ${course.buttonColor} text-white text-sm font-semibold hover:opacity-90 transition-opacity`}>
+                      <button
+                        className={`px-4 py-2 ${course.buttonColor} text-white text-sm font-semibold hover:opacity-90 transition-opacity`}
+                      >
                         {course.buttonText}
                       </button>
                       <span className="text-sm font-medium text-success-500">
@@ -200,13 +208,15 @@ export default function Index() {
                       </span>
                     </div>
                   ) : (
-                    <button className={`w-full px-4 py-2 ${course.buttonColor} text-white text-sm font-semibold mb-4 hover:opacity-90 transition-opacity`}>
+                    <button
+                      className={`w-full px-4 py-2 ${course.buttonColor} text-white text-sm font-semibold mb-4 hover:opacity-90 transition-opacity`}
+                    >
                       {course.buttonText}
                     </button>
                   )}
-                  
+
                   <div className="h-0.5 w-full bg-gray-100 relative">
-                    <div 
+                    <div
                       className={`h-0.5 ${course.progressColor} absolute left-0 top-0`}
                       style={{ width: `${course.progress}%` }}
                     />
