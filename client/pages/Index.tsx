@@ -82,23 +82,23 @@ export default function Index() {
         
         <div className="relative max-w-[1320px] mx-auto px-4 md:px-8 pt-10">
           <div className="bg-white border border-secondary-600 shadow-sm">
-            <div className="flex items-center justify-between p-10">
-              <div className="flex items-center gap-6">
+            <div className="flex flex-col lg:flex-row items-center justify-between p-6 md:p-10 gap-6">
+              <div className="flex flex-col sm:flex-row items-center gap-6 w-full lg:w-auto">
                 <img 
                   src="https://api.builder.io/api/v1/image/assets/TEMP/0ee3c66b6366a6afbe928634f8eb3f2d9b8f4f0d?width=220" 
                   alt="Student Profile" 
                   className="w-[110px] h-[110px] rounded-full object-cover"
                 />
-                <div className="flex flex-col gap-3">
-                  <h1 className="text-2xl font-semibold text-gray-900 tracking-tight">
+                <div className="flex flex-col gap-3 text-center sm:text-left">
+                  <h1 className="text-xl md:text-2xl font-semibold text-gray-900 tracking-tight break-words">
                     Lê Nguyễn Nam Khánh
                   </h1>
-                  <p className="text-base text-gray-600">
+                  <p className="text-sm md:text-base text-gray-600 break-words">
                     Khoa học máy tính - Tăng cường tiếng Nhật
                   </p>
                 </div>
               </div>
-              <button className="flex items-center gap-3 px-8 py-3 bg-secondary-200 hover:bg-secondary-200/80 transition-colors">
+              <button className="flex items-center gap-3 px-6 md:px-8 py-2 md:py-3 bg-secondary-200 hover:bg-secondary-200/80 transition-colors whitespace-nowrap">
                 <span className="text-lg font-semibold text-secondary-600">
                   Become Instructor
                 </span>
