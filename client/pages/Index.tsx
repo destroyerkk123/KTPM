@@ -1,8 +1,9 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { ArrowRight, PlayCircle, CheckSquare, Trophy } from "lucide-react";
-
+import { Link, useLocation } from "react-router-dom";
 export default function Index() {
+   const location = useLocation();
   const stats = [
     {
       icon: PlayCircle,
@@ -75,7 +76,12 @@ export default function Index() {
     },
   ];
 
-  const tabs = ["Dashboard", "Quizz", "Teachers", "Message", "Settings"];
+  const tabs = [{ id: "dashboard", label: "Dashboard", path: "/" },
+    { id: "quizz", label: "Quizz", path: "/dashboard" },
+    { id: "teachers", label: "Teachers", path: "/teachers" },
+    { id: "message", label: "Message", path: "/message" },
+    { id: "settings", label: "Settings", path: "/settings" }
+  ];
 
   return (
     <div className="min-h-screen bg-white flex flex-col">
@@ -112,17 +118,18 @@ export default function Index() {
 
             <div className="border-t border-secondary-300">
               <div className="flex items-center justify-center gap-6">
-                {tabs.map((tab, index) => (
-                  <button
-                    key={tab}
+                {tabs.map((tab) => (
+                  <Link
+                    key={tab.id}
+                    to={tab.path}
                     className={`py-5 px-0 text-base font-medium ${
-                      index === 0
+                      location.pathname === tab.path
                         ? "text-gray-900 border-b-[3px] border-bk-color"
                         : "text-gray-700"
                     }`}
                   >
-                    {tab}
-                  </button>
+                    {tab.label}
+                  </Link>
                 ))}
               </div>
             </div>
